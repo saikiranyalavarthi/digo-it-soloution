@@ -7,6 +7,15 @@ import WhyChooseUs from "./Componets/WhyChooseUs";
 import OurServices from "./Componets/Services";
 import StatsCards from "./Componets/StatsCards";
 import ContactForm from "./Componets/ContactForm";
+import TrustedCompany from "./Componets/TrustedCompany";
+import BusinessValue from "./Componets/BusinessValue";
+import DigitalEmployeeExperience from "./Componets/DigitalEmployeeExperience";
+import CallToAction from "./Componets/CallToAction";
+import StatsSection from "./Componets/StatsSection";
+import ItSolutionsSection from "./Componets/ItSolutionsSection";
+import GlobalAspirations from "./Componets/GlobalAspirations";
+import EnterpriseFeatures from "./Componets/EnterpriseFeatures";
+import DemocratizingIT from "./Componets/DemocratizingIT";
 
 const page = () => {
   return (
@@ -14,12 +23,21 @@ const page = () => {
       <main>
         <HeroSection />
         <AnimatedButtons />
+        <TrustedCompany />
         <AboutSection />
         <WhyChooseUs />
+        <BusinessValue />
+        <ItSolutionsSection />
         <OurServices />
-        <StatsCards />
+        <GlobalAspirations />
+        <EnterpriseFeatures />
+        <DemocratizingIT />
+        <DigitalEmployeeExperience />
         {/* <StatsAndLogos /> */}
-        <ContactForm />
+        {/* <ContactForm /> */}
+        <StatsCards />
+        <StatsSection />
+        <CallToAction />
       </main>
     </div>
   );

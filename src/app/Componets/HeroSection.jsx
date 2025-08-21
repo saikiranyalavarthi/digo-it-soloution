@@ -1,47 +1,53 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const tags = [
-  "React Developers",
-  "Node JS Developers",
-  "Full Stack Developers",
-  "Blockchain Developers",
-  "Android Developers",
-  "iOS Developers",
-  "Artificial Intelligence",
-  "E-commerce",
-  "Databases",
-  "Cyber Security",
-  "Robotics",
-  "Seattle",
-  "Los Angeles",
-  "San Francisco",
-  "New York",
-  "Austin",
-  "Denver",
-  "Web3",
+  { text: "Full Stack Developers", top: "40%", left: "40%", depth: 0.5 },
+  { text: "Front End Developers", top: "60%", left: "20%", depth: 1.0 },
+  { text: "iOS Developers", top: "30%", left: "70%", depth: 1.5 },
+  { text: "React Developers", top: "70%", left: "50%", depth: 2.0 },
+  { text: "AI / Web3", top: "20%", left: "30%", depth: 1.2 },
+  { text: "Blockchain Developers", top: "50%", left: "80%", depth: 1.8 },
+  { text: "DevOps Engineers", top: "80%", left: "10%", depth: 2.5 },
+  { text: "Cloud Engineers", top: "10%", left: "60%", depth: 0.8 },
+  { text: "Data Scientists", top: "90%", left: "40%", depth: 3.0 },
+  { text: "Cybersecurity Experts", top: "20%", left: "80%", depth: 1.6 },
+  { text: "UI/UX Designers", top: "70%", left: "30%", depth: 2.2 },
+  { text: "QA Engineers", top: "50%", left: "60%", depth: 1.4 },
+  { text: "Project Managers", top: "30%", left: "20%", depth: 0.9 },
+  { text: "Business Analysts", top: "40%", left: "70%", depth: 1.1 },
+  { text: "Technical Writers", top: "60%", left: "90%", depth: 1.3 },
+  { text: "Support Engineers", top: "80%", left: "50%", depth: 1.7 },
+  { text: "Network Engineers", top: "10%", left: "10%", depth: 0.6 },
+  { text: "Database Administrators", top: "90%", left: "90%", depth: 2.8 },
+  { text: "System Administrators", top: "20%", left: "10%", depth: 1.9 },
+  { text: "Game Developers", top: "30%", left: "80%", depth: 2.4 },
+  { text: "Mobile App Developers", top: "50%", left: "20%", depth: 1.0 },
+  { text: "AR/VR Developers", top: "70%", left: "70%", depth: 2.6 },
+  { text: "IoT Developers", top: "40%", left: "30%", depth: 1.5 },
+  { text: "Robotics Engineers", top: "60%", left: "40%", depth: 1.8 },
+  { text: "Embedded Systems Engineers", top: "80%", left: "60%", depth: 2.3 },
+  { text: "AI/ML Engineers", top: "20%", left: "50%", depth: 1.4 },
+  { text: "Big Data Engineers", top: "90%", left: "30%", depth: 2.1 },
 ];
 
 export default function HeroSection() {
-  const [mouseX, setMouseX] = useState(0);
-  const [positions, setPositions] = useState([]);
-
-  // Random positions ONCE on mount
   useEffect(() => {
-    const initialPositions = tags.map(() => ({
-      top: Math.random() * 80 + 10,
-      left: Math.random() * 80 + 10,
-    }));
-    setPositions(initialPositions);
-  }, []);
+    const floatingTags = document.querySelectorAll(".floating-tag");
 
-  // Track mouse movement
-  useEffect(() => {
     const handleMouseMove = (e) => {
-      const centerX = window.innerWidth / 2;
-      const offset = (e.clientX - centerX) / centerX;
-      setMouseX(offset);
+      const { innerWidth, innerHeight } = window;
+      const x = (e.clientX - innerWidth / 2) / innerWidth;
+      const y = (e.clientY - innerHeight / 2) / innerHeight;
+
+      floatingTags.forEach((tag) => {
+        const depth = parseFloat(tag.getAttribute("data-depth")) || 1;
+        const moveX = -x * (depth * 40);
+        const moveY = -y * (depth * 40);
+
+        tag.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+      });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -49,45 +55,32 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white py-24 text-center h-screen flex items-center justify-center">
+    <section className="relative w-full h-screen bg-white overflow-hidden flex items-center justify-center">
       {/* Heading */}
-      <h1 className="text-5xl md:text-6xl font-extrabold text-gray-600 relative z-10 inline-block px-6 py-4 border-4 border-dotted border-blue-600 rounded-lg">
-        <span className="text-blue-800">DIGO</span> IT Solution
+      <h1 className="absolute z-20 text-2xl sm:text-4xl md:text-6xl font-extrabold text-gray-600 border-dashed border-red-500 p-3 sm:p-6 rounded-lg shadow-lg text-center">
+        <span className="text-blue-500">DIGO</span> IT Solution
       </h1>
 
       {/* Floating Tags */}
-      <div className="absolute inset-0 overflow-hidden">
-        {positions.map((pos, index) => (
-          <span
+      <div className="absolute inset-0">
+        {tags.map((tag, index) => (
+          <div
             key={index}
-            className="
-              absolute 
-              bg-white 
-              hover:bg-blue-100 
-          
-              border border-gray-200 
-              shadow-md 
-              text-gray-800 
-              px-4 py-2 
-              rounded-full 
-              text-sm font-medium 
-              transition-all duration-500 ease-in-out 
-              hover:scale-120 hover:shadow-lg hover:cursor-pointer
-              hover:shadow-blue-500/50 
-              hover:rotate-1
-              hover:from-red-200 hover:to-blue-200
-            "
-            style={{
-              top: `${pos.top}%`,
-              left: `${pos.left}%`,
-              transform: `translateX(${
-                mouseX * (index % 2 === 0 ? 15 : -15)
-              }px)`,
-              transition: "transform 1.5s ease-in-out",
-            }}
+            data-depth={tag.depth}
+            style={{ top: tag.top, left: tag.left }}
+            className="floating-tag absolute transition-transform duration-200 ease-out"
           >
-            {tags[index]}
-          </span>
+            <button
+              className="
+                bg-white text-black text-[10px] sm:text-sm md:text-base font-medium
+                px-2 py-1 sm:px-4 sm:py-2 rounded-full shadow-md border border-white
+                hover:scale-130 hover:shadow-lg hover:bg-red-300 hover:text-white
+                cursor-pointer transition-all duration-300
+              "
+            >
+              {tag.text}
+            </button>
+          </div>
         ))}
       </div>
     </section>
