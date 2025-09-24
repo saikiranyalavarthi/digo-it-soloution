@@ -10,11 +10,16 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 py-16 px-6">
+    <footer className="bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400  border-gray-200 py-16 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-indigo-600">DIGOIT</h2>
+          <img
+            src="/newlogo.png" // your logo in public folder
+            alt="DIGOIT Logo"
+            className="h-25 w-auto"
+          />
+
           <p className="text-gray-600 mt-4 leading-relaxed">
             Driving digital transformation with tailored IT solutions,
             infrastructure services, and enterprise-grade support.

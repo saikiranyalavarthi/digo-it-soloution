@@ -16,6 +16,7 @@ import ItSolutionsSection from "./Componets/ItSolutionsSection";
 import GlobalAspirations from "./Componets/GlobalAspirations";
 import EnterpriseFeatures from "./Componets/EnterpriseFeatures";
 import DemocratizingIT from "./Componets/DemocratizingIT";
+import IndustriesSection from "./Componets/IndustriesSection";
 
 const page = () => {
   return (
@@ -35,6 +36,7 @@ const page = () => {
         <DigitalEmployeeExperience />
         {/* <StatsAndLogos /> */}
         {/* <ContactForm /> */}
+
         <StatsCards />
         <StatsSection />
         <CallToAction />

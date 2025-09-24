@@ -61,7 +61,7 @@ export default function DigitalEmployeeExperience() {
           {items.map((item, index) => (
             <div
               key={index}
-              className="bg-blue-400 text-gray-800 rounded-lg shadow-md p-6 text-left hover:shadow-xl transition"
+              className="bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400 text-gray-800 rounded-lg shadow-md p-6 text-left hover:shadow-xl transition"
             >
               <div className="mb-4">{item.icon}</div>
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>

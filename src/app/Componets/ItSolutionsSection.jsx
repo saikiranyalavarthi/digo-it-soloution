@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ItSolutionsSection() {
   return (
-    <section className="bg-blue-600 py-16 px-6 md:px-12 lg:px-20 text-center md:text-left">
+    <section className="bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400 py-16 px-6 md:px-12 lg:px-20 text-center md:text-left">
       {/* Title */}
       <h2 className="text-3xl md:text-4xl font-semibold text-white max-w-3xl mx-auto md:mx-0 mb-12">
         We make complex IT environments easy to manage

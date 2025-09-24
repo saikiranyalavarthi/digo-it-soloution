@@ -17,20 +17,19 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can handle sending form data via API or EmailJS
     console.log(formData);
     setSubmitted(true);
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <section className="bg-white py-20 px-6 md:px-12 lg:px-20">
-      <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-10">
-        <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center">
+    <section className="bg-gradient-to-b from-indigo-50 via-purple-50 to-pink-50 py-20 px-6 md:px-12 lg:px-20">
+      <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl p-12">
+        <h2 className="text-4xl font-bold text-indigo-700 mb-6 text-center">
           Get in Touch
         </h2>
         {submitted && (
-          <p className="text-green-600 text-center mb-4 animate-pulse">
+          <p className="text-green-500 text-center mb-4 animate-pulse font-semibold">
             Thank you! Your message has been sent.
           </p>
         )}
@@ -39,7 +38,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="name"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-indigo-600 font-medium mb-2"
             >
               Your Name
             </label>
@@ -51,7 +50,7 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Enter your name"
               required
-              className="w-full px-5 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
+              className="w-full px-5 py-3 border-2 border-indigo-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition bg-gradient-to-r from-white to-indigo-50"
             />
           </div>
 
@@ -59,7 +58,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="email"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-indigo-600 font-medium mb-2"
             >
               Your Email
             </label>
@@ -71,7 +70,7 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Enter your email"
               required
-              className="w-full px-5 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
+              className="w-full px-5 py-3 border-2 border-purple-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition bg-gradient-to-r from-white to-purple-50"
             />
           </div>
 
@@ -79,7 +78,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="message"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-indigo-600 font-medium mb-2"
             >
               Your Message
             </label>
@@ -91,7 +90,7 @@ export default function ContactForm() {
               placeholder="Type your message..."
               rows={5}
               required
-              className="w-full px-5 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition resize-none"
+              className="w-full px-5 py-3 border-2 border-pink-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition resize-none bg-gradient-to-r from-white to-pink-50"
             />
           </div>
 
@@ -99,7 +98,7 @@ export default function ContactForm() {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300"
+              className="bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300"
             >
               Send Message
             </button>

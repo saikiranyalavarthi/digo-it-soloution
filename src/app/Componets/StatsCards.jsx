@@ -9,25 +9,25 @@ export default function StatsCards() {
       number: "56k+",
       label: "Satisfied Clients",
       icon: FiUsers,
-      color: "bg-blue-500",
+      color: "bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400",
     },
     {
       number: "266+",
       label: "Team Support",
       icon: FiHeadphones,
-      color: "bg-blue-500",
+      color: "bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400",
     },
     {
       number: "1k+",
       label: "Expert Consultants",
       icon: FiUserCheck,
-      color: "bg-blue-500",
+      color: "bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400",
     },
     {
       number: "59k+",
       label: "Industry Awards",
       icon: FiAward,
-      color: "bg-blue-500",
+      color: "bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400",
     },
   ];
 
@@ -39,7 +39,7 @@ export default function StatsCards() {
           return (
             <motion.div
               key={idx}
-              className={`group relative ${stat.color} rounded-2xl p-8 flex flex-col items-center text-white shadow-lg cursor-pointer overflow-hidden`}
+              className={`group relative ${stat.color} rounded-2xl p-8 flex flex-col items-center text-black shadow-lg cursor-pointer overflow-hidden`}
               whileHover={{ scale: 1.08 }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
