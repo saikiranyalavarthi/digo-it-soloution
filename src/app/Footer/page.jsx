@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400  border-gray-200 py-16 px-6">
+    <footer className="bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400 py-16 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
@@ -81,15 +81,26 @@ export default function Footer() {
           <ul className="space-y-3 text-gray-600">
             <li className="flex items-start gap-2">
               <MapPin className="w-5 h-5 text-indigo-600 mt-1" />
-              <span>27 Division St, New York, NY 10002, USA</span>
+              <span>
+                2nd Floor, SATTAVA MAGNUS B507, Sabza Colony, Brindavan Colony,
+                Toli Chowki, Hyderabad, Telangana
+              </span>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-indigo-600" />
               <span>info@digoit.com</span>
             </li>
             <li className="flex items-center gap-2">
+              <Mail className="w-5 h-5 text-indigo-600" />
+              <span>Salesdigoit@gmail.com</span>
+            </li>
+            <li className="flex items-center gap-2">
               <Phone className="w-5 h-5 text-indigo-600" />
-              <span>+1 (321) 984 754</span>
+              <span>+91 8143410067</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone className="w-5 h-5 text-indigo-600" />
+              <span>+91 7207314999</span>
             </li>
           </ul>
 
@@ -114,7 +125,7 @@ export default function Footer() {
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/digo-it-solutions-pvt-ltd/"
               className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:bg-indigo-600 hover:text-white transition"
             >
               <FaLinkedinIn />

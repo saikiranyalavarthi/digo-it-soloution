@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -37,9 +38,11 @@ export default function AboutSection() {
 
         {/* CTA Button */}
         <div className="mt-8">
-          <button className="px-6 py-3 rounded-xl bg-black text-white font-semibold shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
-            Learn More
-          </button>
+          <Link href="/about">
+            <button className="px-6 py-3 rounded-xl text-white font-semibold shadow-md hover:scale-105 hover:shadow-lg bg-black hover:bg-gradient-to-r hover:bg-red-600  transition-all duration-300 cursor-pointer">
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
     </section>

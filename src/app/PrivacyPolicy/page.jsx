@@ -100,9 +100,11 @@ export default function PrivacyPolicy() {
             practices, please contact us:
           </p>
           <ul className="mt-3 text-gray-700 space-y-2">
-            <li>📍 Address: 27 Division St, New York, NY 10002, USA</li>
+            <li>📍 Address: Hi-tech city, Hyderabad, India</li>
             <li>📧 Email: info@digoit.com</li>
-            <li>📞 Phone: +1 (321) 984 754</li>
+            <li>📧 Sales Email: Salesdigoit@gmail.com</li>
+            <li>📞 Phone: +91 8143410067</li>
+            <li>📞 Alternate Phone: +91 7207314999</li>
           </ul>
         </section>
 

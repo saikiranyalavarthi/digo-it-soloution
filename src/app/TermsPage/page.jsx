@@ -42,7 +42,8 @@ export default function TermsPage() {
           <p className="text-gray-700 leading-relaxed">
             All content, trademarks, and data on this website, including but not
             limited to text, images, graphics, and software, are the property of
-            our company or licensed to us, and are protected by applicable laws.
+            <span className="font-semibold"> DigoIT Solution PVT LTD</span> or
+            licensed to us, and are protected by applicable laws.
           </p>
         </section>
 
@@ -70,15 +71,15 @@ export default function TermsPage() {
           <h2 className="text-2xl font-semibold mb-2">6. Contact Us</h2>
           <p className="text-gray-700 leading-relaxed">
             If you have any questions regarding these Terms & Conditions, please
-            contact us at{" "}
-            <a
-              href="mailto:contact@example.com"
-              className="text-blue-600 hover:underline"
-            >
-              contact@example.com
-            </a>
-            .
+            contact us at:
           </p>
+          <ul className="mt-3 text-gray-700 space-y-2">
+            <li>📍 Address: Hi-tech city, Hyderabad, India</li>
+            <li>📧 Email: info@digoit.com</li>
+            <li>📧 Sales Email: Salesdigoit@gmail.com</li>
+            <li>📞 Phone: +91 8143410067</li>
+            <li>📞 Alternate Phone: +91 7207314999</li>
+          </ul>
         </section>
       </div>
     </section>

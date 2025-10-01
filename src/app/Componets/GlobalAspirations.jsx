@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function GlobalAspirations() {
   return (
@@ -29,12 +30,12 @@ export default function GlobalAspirations() {
             offices and partners across the world, ManageEngine can help you
             meet your global aspirations.
           </p>
-          <a
-            href="#"
+          <Link
+            href="/about"
             className="inline-flex items-center gap-2 text-yellow-400 font-medium hover:underline underline-offset-4 transition"
           >
             Learn more →
-          </a>
+          </Link>
         </div>
       </div>
     </section>

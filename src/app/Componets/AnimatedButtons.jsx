@@ -7,7 +7,7 @@ export default function HeroSection() {
   const headingLines = ["Digo IT Comprehensive Solutions for Your Success"];
 
   const buttons = [
-    { label: "10+ experince ", href: "/get-started" },
+    { label: "About Us ", href: "/about" },
 
     { label: "Contact Us", href: "/contact" },
   ];

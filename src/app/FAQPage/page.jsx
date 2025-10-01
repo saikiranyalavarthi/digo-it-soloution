@@ -12,7 +12,7 @@ export default function FAQPage() {
     {
       question: "How can I contact support?",
       answer:
-        "You can reach us via our Contact page, email at support@digoit.com, or call us at +1 (321) 984-754.",
+        "You can reach us via our Contact page, email at info@digoit.com or Salesdigoit@gmail.com, or call us at +91 8143410067 / +91 7207314999.",
     },
     {
       question: "Do you offer enterprise-level IT solutions?",
@@ -28,6 +28,11 @@ export default function FAQPage() {
       question: "Is there a trial period for your IT services?",
       answer:
         "We provide customized consultation sessions to evaluate your needs before committing to a long-term service plan.",
+    },
+    {
+      question: "What is Digo IT’s support availability?",
+      answer:
+        "We offer 24/7 support for all IT services. You can reach us anytime via email or phone.",
     },
   ];
 

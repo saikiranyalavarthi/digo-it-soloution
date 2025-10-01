@@ -1,5 +1,4 @@
-// app/page.jsx (Next.js 13+ with App Router)
-// or pages/index.js if you’re using older Next.js
+// app/page.jsx
 "use client";
 
 import { useState } from "react";
@@ -21,8 +20,38 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Form submitted successfully!");
+
+    // ✅ WhatsApp Number (with country code)
+    const whatsappNumber = "917207314999"; // +91 7207314999
+
+    // ✅ Format message text
+    const text = `Hello, I would like to connect with Digo IT.
+    
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Company: ${formData.company}
+Phone: ${formData.phone}
+Country: ${formData.country}
+Message: ${formData.message}`;
+
+    // ✅ Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      text
+    )}`;
+
+    // ✅ Redirect to WhatsApp
+    window.open(whatsappUrl, "_blank");
+
+    // ✅ Reset form
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      company: "",
+      phone: "",
+      country: "India",
+      message: "",
+    });
   };
 
   return (
@@ -51,9 +80,9 @@ export default function Home() {
                 Improve employee experiences, security, and increase business
                 efficiency with AI.
               </p>
-              <a href="#" className="text-blue-600 text-sm font-medium">
+              {/* <a href="#" className="text-blue-600 text-sm font-medium">
                 AI for every need →
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -70,9 +99,9 @@ export default function Home() {
                 Experience enhanced SLAs, end-to-end assistance, and more with
                 our Enterprise Support Program.
               </p>
-              <a href="#" className="text-blue-600 text-sm font-medium">
+              {/* <a href="#" className="text-blue-600 text-sm font-medium">
                 Always-on support →
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -165,7 +194,7 @@ export default function Home() {
 
             <button
               type="submit"
-              className="bg-blue-600 text-white font-semibold w-full py-3 rounded-lg hover:bg-blue-700 transition"
+              className="bg-blue-600 text-white font-semibold w-full py-3 rounded-lg hover:bg-blue-600 transition"
             >
               Submit
             </button>

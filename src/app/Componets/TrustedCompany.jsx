@@ -45,7 +45,7 @@ export default function TrustedCompany() {
               className={`px-6 py-3 rounded-full font-semibold transition ${
                 activeTab === "mission"
                   ? "bg-orange-500 text-white"
-                  : "bg-black text-white hover:bg-gray-800"
+                  : "bg-black text-white hover:bg-gray-800 cursor-pointer"
               }`}
             >
               Our Mission
@@ -55,7 +55,7 @@ export default function TrustedCompany() {
               className={`px-6 py-3 rounded-full font-semibold transition ${
                 activeTab === "vision"
                   ? "bg-orange-500 text-white"
-                  : "bg-black text-white hover:bg-gray-800"
+                  : "bg-black text-white hover:bg-gray-800 cursor-pointer"
               }`}
             >
               Our Vision
@@ -65,7 +65,7 @@ export default function TrustedCompany() {
               className={`px-6 py-3 rounded-full font-semibold transition ${
                 activeTab === "history"
                   ? "bg-orange-500 text-white"
-                  : "bg-black text-white hover:bg-gray-800"
+                  : "bg-black text-white hover:bg-gray-800 cursor-pointer"
               }`}
             >
               Our History

@@ -17,7 +17,19 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    // Create WhatsApp message
+    const whatsappNumber = "917207314999"; // Add country code (91 for India)
+    const text = `Hello, my name is ${formData.name}.
+My email is ${formData.email}.
+Message: ${formData.message}`;
+
+    // Open WhatsApp link
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      text
+    )}`;
+    window.open(whatsappUrl, "_blank");
+
     setSubmitted(true);
     setFormData({ name: "", email: "", message: "" });
   };
@@ -30,7 +42,7 @@ export default function ContactForm() {
         </h2>
         {submitted && (
           <p className="text-green-500 text-center mb-4 animate-pulse font-semibold">
-            Thank you! Your message has been sent.
+            Redirecting to WhatsApp...
           </p>
         )}
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -98,9 +110,9 @@ export default function ContactForm() {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300"
+              className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300"
             >
-              Send Message
+              Send via WhatsApp
             </button>
           </div>
         </form>

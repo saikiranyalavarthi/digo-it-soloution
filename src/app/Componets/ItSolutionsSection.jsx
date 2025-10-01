@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ItSolutionsSection() {
   return (
@@ -31,12 +32,12 @@ export default function ItSolutionsSection() {
               className="rounded-lg"
             />
           </div>
-          <a
+          {/* <a
             href="#"
             className="mt-4 inline-block text-blue-600 font-medium text-sm hover:underline"
           >
             View our integrations →
-          </a>
+          </a> */}
         </div>
 
         {/* Card 2 */}
@@ -60,12 +61,12 @@ export default function ItSolutionsSection() {
               className="rounded-lg"
             />
           </div>
-          <a
-            href="#"
+          <Link
+            href="/about"
             className="mt-4 inline-block text-blue-600 font-medium text-sm hover:underline"
           >
             Learn more →
-          </a>
+          </Link>
         </div>
       </div>
     </section>

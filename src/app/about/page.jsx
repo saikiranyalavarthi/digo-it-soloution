@@ -290,9 +290,12 @@ export default function AboutPage() {
             Our team is here to answer your question about Spet
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
-            <button className="px-8 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-md shadow-md transition">
-              CONTACT US
-            </button>
+            <a href="/contact">
+              <button className="px-8 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-md shadow-md transition hover:cursor-pointer">
+                CONTACT US
+              </button>
+            </a>
+
             <a
               href="#"
               className="text-white underline hover:text-gray-200 transition"
@@ -356,9 +359,11 @@ export default function AboutPage() {
                   Don&apos;t hesitate to contact us
                 </p>
               </div>
-              <button className="px-8 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-md shadow-md transition">
-                CONTACT US
-              </button>
+              <a href="/contact">
+                <button className="px-8 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-md shadow-md transition hover:cursor-pointer">
+                  CONTACT US
+                </button>
+              </a>
             </div>
           </div>
         </div>
