@@ -135,8 +135,20 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-200 mt-12 pt-6 text-center text-gray-600">
+      <div className="relative border-t border-gray-200 mt-12 pt-6 text-center text-gray-600 text-sm md:text-base group">
         © {new Date().getFullYear()} DIGOIT. All rights reserved.
+        {/* Tooltip: visible on hover for desktop, always visible on mobile */}
+        <a
+          href="https://www.linkedin.com/in/sai-kiran-yalavarthi-9aa35919a/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 
+               bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-lg 
+               opacity-0 md:group-hover:opacity-100 transition-opacity duration-300
+               block sm:block hover:bg-blue-700"
+        >
+          Website designed by Saikiran Yalavarthi
+        </a>
       </div>
     </footer>
   );
